@@ -19,29 +19,30 @@ html(lang='en-gb')
       link(rel='icon', type='image/png', href='/img/favicon-#{size}x#{size}.png' sizes='#{size}x#{size}')
     <!--[if IE]><link rel='shortcut icon' type='image/x-icon' href='/favicon.ico')<![endif]-->
     meta(name='msapplication-TileColor', content=metaTileColor)
-    //- meta(name='msapplication-TileImage', content='/img/mstile-144x144.png')
-    //- meta(itemprop='name', content=pageTitle)
-    //- meta(itemprop='description', content=pageDescription)
-    //- meta(itemprop='image', content=pageImage)
-    //- meta(property='og:url' content=pageUrl)
-    //- meta(property='og:type' content='website')
-    //- meta(property='og:site_name' content=domain)
-    //- meta(property='og:title' content=pageTitle)
-    //- meta(property='og:description' content=pageDescription)
-    //- meta(property='og:image' content=pageImage)
-    //- meta(property='og:updated_time' content=time.format())
-    //- meta(name='twitter:card' content='summary')
-    //- meta(name='twitter:domain' content=domain)
-    //- meta(name='twitter:title' content=pageTitle)
-    //- meta(name='twitter:description' content=pageDescription)
-    //- meta(name='twitter:image' content=pageImage)
+    meta(name='msapplication-TileImage', content='/img/mstile-144x144.png')
+    meta(itemprop='name', content=pageTitle)
+    meta(itemprop='description', content=pageDescription)
+    meta(itemprop='image', content=pageImage)
+    meta(property='og:url' content=pageUrl)
+    meta(property='og:type' content='website')
+    meta(property='og:site_name' content=domain)
+    meta(property='og:title' content=pageTitle)
+    meta(property='og:description' content=pageDescription)
+    meta(property='og:image' content=pageImage)
+    meta(property='og:updated_time' content=time.format())
+    meta(name='twitter:card' content='summary')
+    meta(name='twitter:domain' content=domain)
+    meta(name='twitter:title' content=pageTitle)
+    meta(name='twitter:description' content=pageDescription)
+    meta(name='twitter:image' content=pageImage)
     if page.noindex
         meta(name='robots', content='noindex,nofollow')
     script
       :uglify
         var host = 'pliersjs.github.io'
-        if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
-          window.location.protocol = "https:"
+          , protocol = 'https:'
+        if ((window.location.host === host) && (window.location.protocol !== protocol)) {
+          window.location.protocol = protocol
         }
   body
     include ./includes/header
