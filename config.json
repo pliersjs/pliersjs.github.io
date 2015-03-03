@@ -1,0 +1,14 @@
+{
+  "global": {
+    "title": "pliersjs.github.io",
+    "description": null,
+    "src": "source",
+    "dest": "_output",
+    "protocol": "https",
+    "domain": "pliersjs.github.io",
+    "url": "%protocol%://%domain%",
+    "metaTitle": "Pliers - A buildy, watchy type tool",
+    "metaDescription": "A build tool for node.js that supports sub-project building and watching",
+    "metaTileColor": "#6a5acd"
+  }
+}
