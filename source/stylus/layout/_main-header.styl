@@ -4,10 +4,13 @@
 //
 
 .main-header
-  padding 7.5em 5em 0
+  padding 2.5em 2em 0
   text-align center
+
+  +width-min($mq--wide)
+    padding 7.5em 5em 0
 
 .site-title
   background embedurl('/img/_logo.png') no-repeat 50% 50%
   background-image embedurl('/img/_logo.svg'), none
-  padding 1.75em 0
+  padding 1.75em 0 2.5em

@@ -6,11 +6,20 @@
 .container
   margin auto
   max-width 40em
-  padding 5em 5em
+  padding 2em
+
+  +width-min($mq--wide)
+    padding 5em
+
+.container--centered
+  text-align center
 
 .container--first
-  padding-bottom 5em
+  padding-bottom 3.5em
   padding-top 0
+
+  +width-min($mq--wide)
+    padding-bottom 7.5em
 
 .highlight
   background rgba($color--black, 0.25)
