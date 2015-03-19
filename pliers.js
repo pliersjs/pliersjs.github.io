@@ -12,7 +12,7 @@ var path = require('path')
   , dest = join(__dirname, config.dest)
   , hiddenGlob = join(src, '**/_*')
   , stylusGlob = join(src, '**/*.styl')
-  , jadeGlob = join(src, 'views', '**/*.jade')
+  , jadeGlob = join(src, 'templates', '**/*.jade')
   , compiledStylesheetsPath = join(src, '_css')
   , pliersImagemin = require('pliers-imagemin')
   , openBrowser = false
@@ -73,7 +73,7 @@ function tasks(pliers) {
       })
     })
 
-    pliers.watch(pliers.filesets.src, function () {
+    pliers.watch(pliers.filesets.jade.concat(pliers.filesets.src), function () {
       pliers.run('buildHtml', function () {
         browserSync.reload(pliers.filesets.pages)
       })

@@ -1,40 +1,35 @@
+//
+// INDEX STYLESHEET
+// ================
+// All Stylus requires should live in here.
+//
+
+
+//
+// SETUP
+//
+
 @require 'stylus-mixins'
+@require 'utilities/*'
 
-$color--black = #000
-$color--slate = #6a5acd
-$color--purple = #4f4399
-$color--white = #fff
 
-html
-  height 100%
+//
+// FOUNDATIONS
+// Base HTML and generic site-wide elements
+//
 
-body
-  background $color--slate embedurl('/img/_logo.png') no-repeat 50% 50%
-  background-image embedurl('/img/_logo.svg'), none
-  color $color--white
-  font 200%/1.5 sans-serif
-  height 100%
-  margin 0 auto
-  width 90%
+@require 'foundations/*'
 
-p
-  margin 0
-  position relative
-  text-align center
-  top 50%
-  transform translateY(-50%)
 
-small
-  bottom 1em
-  display block
-  font-size 45%
-  left 1em
-  position absolute
-  right 1em
-  text-align center
+//
+// LAYOUT SECTIONS
+//
 
-a
-  border-bottom 2px dashed $color--white
-  border-color rgba($color--black, .25)
-  color $color--white
-  text-decoration none
+@require 'layout/*'
+
+
+//
+// GENERIC COMPONENTS
+//
+
+@require 'components/*'

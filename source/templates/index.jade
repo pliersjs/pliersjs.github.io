@@ -1,0 +1,44 @@
+extend default
+
+block contents
+  .container.container--first
+    pre.terminal
+      code.terminal__content.
+        $ ~ npm install pliers -g
+
+  .highlight
+    .container
+      h2 Essential features, nothing more
+      p Pliers allows you to use JavaScript to write your build tasks like you would your applications. It has just three key features:
+      ol
+        li #[strong Tasks] - separate your build into runnable tasks, with dependency resolution
+        li #[strong Filesets] - define a set of files based on a include and exclude patterns
+        li #[strong File watching] -  watch files and execute arbitrary code when they change
+      p These important features are provided for you, then Pliers gets out of your way. There is no special API for tasks – you just write JavaScript. That way, you can leverage the buzzing ecosystem that is npm as your 'plugin' repository.
+
+  .container
+    h2 Do we really need another build tool?
+    p Here in the Pliers camp, our previous build workflows often involved Makefiles. We are JS junkies, not make or bash experts.
+    p Writing our build tasks in JS means…
+    ul
+      li We can use the same quality assurance tools that we use on the rest of our stack
+      li We can leverage the thousands of available unit testednpm modules out there
+      li And we know the language inside out
+    p There's no dispute that GNU Make is a powerful tool, but not only does it fail to line up with our love for JS – it lacks one vital feature that is a big use case for us: #[em watching files for changes and performing certain actions].
+
+  .highlight
+    .container
+      h2 Getting started
+      p #[a(href='https://github.com/pliersjs/pliers#readme') The GitHub README] has the API nitty gritty, but here is a plain and simple example to get you started:
+      pre.terminal
+        code.terminal__content.
+          module.exports = tasks
+
+          function (tasks) {
+
+            pliers('speak', function (done) {
+              console.log('Hello, world!')
+              done()
+            })
+
+          }

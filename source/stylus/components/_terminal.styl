@@ -1,0 +1,38 @@
+//
+// TERMINAL STYLE CODE BLOCK
+// ===========
+//
+
+circle()
+  background $color--grey--dark
+  border-radius 50%
+  content ''
+  height 0.75em
+  left 1em
+  position absolute
+  top 0.85em
+  width 0.75em
+
+.terminal
+  background $color--grey
+  border-radius 0.5em
+  padding-top 2.5em
+  position relative
+
+  &:before
+    circle()
+
+  &:after
+    circle()
+    left 2.25em
+
+.terminal__content
+  background $color--white
+  border-radius 0 0 0.5em 0.5em
+  color $color--black
+  display block
+  padding 1em 1.5em
+
+  &:after
+    circle()
+    left 3.5em

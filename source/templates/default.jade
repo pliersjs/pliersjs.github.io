@@ -19,7 +19,7 @@ html(lang='en-gb')
       link(rel='icon', type='image/png', href='/img/favicon-#{size}x#{size}.png' sizes='#{size}x#{size}')
     <!--[if IE]><link rel='shortcut icon' type='image/x-icon' href='/favicon.ico')<![endif]-->
     meta(name='msapplication-TileColor', content=metaTileColor)
-    meta(name='msapplication-TileImage', content='/img/mstile-144x144.png')
+    meta(name='msapplication-TileImage', content=metaImage)
     meta(itemprop='name', content=pageTitle)
     meta(itemprop='description', content=pageDescription)
     meta(itemprop='image', content=pageImage)
@@ -45,9 +45,10 @@ html(lang='en-gb')
           window.location.protocol = protocol
         }
   body
-    include ./includes/header
+    include ./layout/main-header
 
-    block contents
-      != contents
+    main.main-content(role='main')
+      block contents
+        != contents
 
-    include ./includes/footer
+    include ./layout/main-footer

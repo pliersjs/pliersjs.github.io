@@ -1,0 +1,39 @@
+//
+// BASE STYLES
+// ===========
+// Like a reset, but not. Rather than including and ignoring, change the content
+// of this file to suit your current project.
+//
+// Typographic styles should live in typography.styl
+// Form and Table styles live in their respective stylesheets
+//
+
+
+*
+*:before
+*:after
+  box-sizing border-box
+
+body
+  background $color--slate
+  color $color--white
+  font 112.5%/1.5 $font--sans-serif
+  margin 0
+
+a
+  border-bottom 2px dashed $color--white
+  border-color rgba($color--black, 0.25)
+  color $color--white
+  text-decoration none
+
+h1
+  font-size 2em
+  font-weight $font--weight--regular
+
+h2
+  font-size 1.25em
+  font-weight $font--weight--regular
+  text-transform uppercase
+
+li
+  padding 0.25em
