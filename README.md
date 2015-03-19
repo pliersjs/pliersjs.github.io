@@ -14,6 +14,6 @@ npm start
 cd _output
 git init
 git add .
-git commit -m "#COMMIT MESSAGE##"
+git commit -m "##COMMIT MESSAGE##"
 git PUSH -f git@bitbucket.org:pliersjs/pliersjs.github.io master
 ```
