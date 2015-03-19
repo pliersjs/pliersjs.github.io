@@ -32,9 +32,9 @@ block contents
       p #[a(href='https://github.com/pliersjs/pliers#readme') The GitHub README] has the API nitty gritty, but here is a plain and simple example to get you started:
       pre.terminal
         code.terminal__content.
-          module.exports = tasks
+          module.exports = task
 
-          function (tasks) {
+          function task(tasks) {
 
             pliers('speak', function (done) {
               console.log('Hello, world!')
