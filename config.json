@@ -5,7 +5,7 @@
     "src": "source",
     "dest": "_output",
     "protocol": "https",
-    "domain": "pliersjs.github.io",
+    "domain": "pliers.js.org",
     "url": "%protocol%://%domain%",
     "metaTitle": "Pliers - A buildy, watchy type tool",
     "metaDescription": "A build tool for node.js that supports sub-project building and watching",
