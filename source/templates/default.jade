@@ -37,13 +37,6 @@ html(lang='en-gb')
     meta(name='twitter:image' content=pageImage)
     if page.noindex
         meta(name='robots', content='noindex,nofollow')
-    script
-      :uglify
-        var host = 'pliersjs.github.io'
-          , protocol = 'https:'
-        if ((window.location.host === host) && (window.location.protocol !== protocol)) {
-          window.location.protocol = protocol
-        }
   body
     include ./layout/main-header
 
